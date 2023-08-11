@@ -1,0 +1,197 @@
+@font-face {
+    font-family: BarlowSemiCondensed-Regular;
+    src: url("../fonts/BarlowSemiCondensed-Regular.ttf");
+}
+
+body {
+    color: $white;
+    margin: 0;
+    padding: 0;
+    font-family: BarlowSemiCondensed-Regular;
+    font-weight: 500;
+    background-color: $white;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+button, input, textarea {
+    font-family: BarlowSemiCondensed-Regular;
+}
+
+a {
+    color: $secondary-color;
+    font-size: $font-size-3;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    padding: 11px 120px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    background-color: $color-1;
+}
+
+h1, h6 {
+    font-weight: 500;
+    line-height: 130%;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: $font-size-6;
+}
+
+h6 {
+    font-size: $font-size-5;
+}
+
+label {
+    display: block;
+    color: $title;
+    font-size: $font-size-1;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: $font-size-4;
+    margin: 0;
+    font-weight: 400;
+    line-height: 139%;
+}
+
+.header {
+    & > a {
+        &:nth-child(1) {
+            margin-right: 25px;
+            
+        }
+
+        &:nth-child(4) {
+            margin-right: 32px;
+        }
+    }
+}
+
+.splash-screen {
+    background-color: $secondary-color;
+    color: $white;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 120px;
+    text-transform: uppercase;
+
+    div {
+        display: flex;
+    }
+
+    a {
+        color: $white;
+        margin-right: 32px;
+    }
+
+    & > .brand {
+        margin-right: 105px;
+    }
+
+    & > .logo {
+        position: absolute;
+        right: 0;
+        top: -18px;
+        z-index: 10;
+    }
+}
+
+.button {
+    background-color: $primary-color;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: $white;
+    font-size: $font-size-2;
+    line-height: 14px;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    border: none;
+    border: 1px solid $primary-color;
+
+    &.bordered {
+        background-color: $transparent;
+        color: $primary-color;
+    }
+}
+
+.button-group {
+    justify-content: space-between;
+    display: flex;
+    & > .button {
+        font-size: $font-size-7;
+        padding: 11px 0;
+        text-align: center;
+        width: 32%;
+    }
+}
+
+.spacer {
+    flex: 1;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $secondary-color;
+
+    @include container-lg {
+        .toolbar {
+            margin: 30px 30px;
+
+            div {
+                margin-top: 8px;
+            }
+
+            & > .logo {
+                top: -1.2vw;
+                z-index: 10;
+                width: 6.6vw;
+            }
+        }
+
+        .header {
+            padding: 11px 30px;
+        }
+    }
+
+    @include container-md {
+        .toolbar {
+            a {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @include container-sm {
+        .toolbar {
+            a {
+                font-size: $font-size-1;
+                margin-right: 16px;
+            }
+        }
+    }
+}

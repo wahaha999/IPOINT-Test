@@ -1,0 +1,38 @@
+// Color
+$primary-color: #BEB185;
+$secondary-color: #252526;
+$transparent: transparent;
+$white: #FFF;
+$title: #E5E7Eb;
+$color-1: #C6B68B;
+$color-2: #1A1A1A;
+$color-3: #8F8E8E;
+$color-input: #bbbbbb26;
+
+// Font Size
+$font-size-1: 12px;
+$font-size-2: 14px;
+$font-size-3: 15px;
+$font-size-4: 16px;
+$font-size-5: 18px;
+$font-size-6: 46px;
+$font-size-7: 11px;
+
+// Mixin
+@mixin container-lg {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin container-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin container-sm {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
